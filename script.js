@@ -16,8 +16,10 @@ async function streamVideoRequest() {
   }
 }
 
+// As soon as the page is loaded, the screen capture is requested
 streamVideoRequest();
 
+// Button event listener listens for user to toggle the "picture in picture" mode
 startButton.addEventListener("click", async () => {
   await videoContainer.requestPictureInPicture();
 });
